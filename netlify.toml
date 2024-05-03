@@ -1,0 +1,5 @@
+[build]
+  command = "npm start"  # Commande pour lancer votre site en local
+
+[dev]
+  command = "npm start"  # Commande pour lancer votre site en local en mode de développement
