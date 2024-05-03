@@ -1,5 +1,5 @@
 [build]
-  command = "npm start"  # Commande pour lancer votre site en local
+  command = "npm build"  # Commande pour lancer votre site en local
 
 [dev]
-  command = "npm start"  # Commande pour lancer votre site en local en mode de développement
+  command = "npm build"  # Commande pour lancer votre site en local en mode de développement
