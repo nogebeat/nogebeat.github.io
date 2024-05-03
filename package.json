@@ -4,6 +4,7 @@
   "description": "The Bonuses of math project Borwein",
   "main": "script.js",
   "scripts": {
+    "build": "npm start",
     "start": "node server.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
