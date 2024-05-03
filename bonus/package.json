@@ -1,0 +1,14 @@
+{
+  "name": "110borwein",
+  "version": "1.0.0",
+  "description": "The Bonuses of math project Borwein",
+  "main": "script.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Noge and Aimane",
+  "license": "UNLICENCED",
+  "devDependencies": {
+    "@fortawesome/fontawesome-free": "^6.5.2"
+  }
+}
