@@ -23,8 +23,24 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>110 BORWEIN</title>
-    <link rel="icon" type="image/x-icon" href="./epitech.icon">
+<!--     <link rel="icon" type="image/x-icon" href="./epitech.icon"> -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-krKTVOqQ9k/lRIoZKNp4R7l1l3Q6lAoI51L3o5dEvk9cj1yjCKn37bO31G5T8HxwWZSQiQHcXIC9b5iwPfIXmQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="styles.css">
+<!--     <link rel="stylesheet" href="styles2.css"> -->
+    <!-- <link rel="stylesheet" href="prism.css"> -->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="https://intra.epitech.eu/favicon.ico">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.1.3/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet">
+    <link href="https://fonts.cdnfonts.com/css/androgyne" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+    <link href="https://fonts.cdnfonts.com/css/james-stroker" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <style>
         body {
             margin: 0;
@@ -163,6 +179,14 @@
             <div id="menu_toggle">
                 <button></button>
             </div>
+            <div class="theme-switch">
+                <span><i class="fas fa-sun"></i></span>
+                <label class="switch">
+                    <input type="checkbox" id="theme-toggle">
+                    <span class="slider round"></span>
+                </label>
+                <span><i class="fas fa-moon"></i></span>
+            </div>
         </div>
     </header>
 
@@ -174,19 +198,14 @@
     </div>
 
     <div class="games">
-        <p class="qr_code_text">Bienvenue sur notre site permettant de faire des calcules intégrales suivant la méthode des frères BORWEIN</p>
+        <p class="qr_code_text">Bienvenue sur notre site permettant de faire des calculs intégraux suivant la méthode des frères BORWEIN</p>
     </div>
 
     <div class="enter_name_container">
-        <p style="font-size: 14px; color: #0f24e4;">Veuillez bien entrée une valeur.</p>
-        <head>
-            <title>Interactive Calculator</title>
-            <link rel="stylesheet" type="text/css" href="style.css">
-          </head>
-          <body>
-            <div class="calculator">
-              <input type="text" id="result" readonly>
-              <div class="buttons">
+        <p style="font-size: 14px; color: var(--primary-color);">Veuillez bien entrer une valeur positive entière.</p>
+        <div class="calculator">
+            <textarea id="result" readonly></textarea>
+            <div class="buttons">
                 <button onclick="clearResult()">C</button>
                 <button onclick="appendNumber(7)">7</button>
                 <button onclick="appendNumber(8)">8</button>
@@ -198,37 +217,70 @@
                 <button onclick="appendNumber(2)">2</button>
                 <button onclick="appendNumber(3)">3</button>
                 <button onclick="appendNumber(0)">0</button>
-                <button onclick="calculate()">=</button>
-              </div>
+                <button onclick="calculate()" style="background-color: var(--primary-color); color: white;">Calculer</button>
             </div>
-            <script src="script.js"></script>
+        </div>
     </div>
 
     <div class="social_media_icons">
-        <a href="https://www.instagram.com/epitech.benin/"><img src="./insta.png" alt="Instagram" class="social_media_icon"></a>
-        <a href="https://open.spotify.com/embed/artist/4eqG81iDoI1B1KnWWb5y99?utm_source=generator"><img src="./twitter.png" alt="Twitter" class="social_media_icon"></a>
-        <a href="https://wa.me/22969078902"><img src="./whatsapp.png" alt="WhatsApp" class="social_media_icon"></a>
+        <a href="https://www.instagram.com/epitech.benin/" class="img-button"><img src="./insta.png" alt="Instagram"></a>
+        <a href="https://open.spotify.com/embed/artist/4eqG81iDoI1B1KnWWb5y99?utm_source=generator" class="img-button"><img src="./twitter.png" alt="Twitter"></a>
+        <a href="https://wa.me/22969078902" class="img-button"><img src="./whatsapp.png" alt="WhatsApp"></a>
     </div>
     <iframe style="border-radius:12px" src="https://open.spotify.com/embed/artist/4eqG81iDoI1B1KnWWb5y99?utm_source=generator" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
-    
-    <footer id="footer">
+
+    <footer class="bg-dark text-light py-4 mt-auto">
         <div class="container">
-            <div class="footer_widgets">
-                <div class="widget">
-                    <h4 class="widget_title">Contact</h4>
-                    <ul class="stm_list-duty">
-                        <li class="widget_contacts_address">Avenue ... 01 BP 2377 Cotonou, Bénin</li>
-                        <li class="signal_appel">Appeler nous au :</li>
-                        <li class="widget_contacts_phone"><i class="fas fa-phone"></i> +229 69 07 89 02</li>
-                        <li class="signal_whatsapp"> Ou</li>
-                        <li class="widget_contacts_email"><a href="https://wa.me/22969078902">Ecrivez nous ici</a></li>
+    
+            <!-- Ligne du haut : ARCADE Project -->
+            <div class="row justify-content-center text-center mb-4">
+                <div class="col-md-6">
+                    <h5 class="text-uppercase mb-2">ARCADE Project</h5>
+                    <p class="mb-1">&copy; 2025 110 Borwein Project Team</p>
+                    <div class="d-flex justify-content-center gap-3">
+                        <a href="https://github.com/nogebeat/110-Borwein" class="text-light">
+                            <i class="fab fa-github"></i> Code source
+                        </a>
+                        <a href="mailto:james.gbetchedji@epitech.eu" class="text-light">
+                            <i class="fas fa-envelope"></i> Contact
+                        </a>
+                    </div>
+                </div>
+            </div>
+    
+            <!-- Ligne du bas : Réseaux et Contact -->
+            <div class="row">
+                <!-- Réseaux -->
+                <div class="col-md-6 mb-3 text-center text-md-start">
+                    <h5 class="text-uppercase">Réseaux</h5>
+                    <div class="d-flex justify-content-center justify-content-md-start gap-3 mt-2">
+                        <a href="#"><img src="https://lerondpoint.onrender.com/assets/logo/instainverse.png" alt="Instagram" class="img-fluid" width="30"></a>
+                        <a href="#"><img src="https://lerondpoint.onrender.com/assets/logo/twitterinverse.png" alt="Twitter" class="img-fluid" width="30"></a>
+                        <a href="https://wa.me/22956549199"><img src="https://lerondpoint.onrender.com/assets/logo/whatsappinverse.png" alt="WhatsApp" class="img-fluid" width="30"></a>
+                    </div>
+                </div>
+    
+                <!-- Contact -->
+                <div class="col-md-6 mb-3 text-center text-md-end">
+                    <h5 class="text-uppercase">Contact</h5>
+                    <ul class="list-unstyled">
+                        <li>Adresse: Avenue ..., 01 BP 2377 Cotonou, Bénin</li>
+                        <li>Téléphone: <a href="tel:+22956549199" class="text-light">+229 56549199</a></li>
+                        <li>Email: <a href="mailto:nogeproductions@gmail.com" class="text-light">nogeproductions@gmail.com</a></li>
+                        <li>WhatsApp: <a href="https://wa.me/22956549199" class="text-light">Écrivez-nous ici</a></li>
                     </ul>
                 </div>
             </div>
-            <p class="copyright">Copyright © Noge. Tous droits réservés. 2024</p>
+    
         </div>
     </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/js/all.min.js"></script>
+    <!-- <script src="prism.js"></script> -->
     <script src="script.js"></script>
+    <script>
+        AOS.init();
+    </script>
     <script>
         function saveNumbers() {
             
